@@ -2,27 +2,21 @@
     margin:0px;
     padding:0px;
   }
+
   html, body{
     height: 100%;
     background-color: #f0f0f7;
     height:100%;
-
 	width:100%;
-
 	margin:auto;
 }
-section{
-    padding: 100px 0;
-    position: relative;
-    display: block;
-}
-
-h1{
-    color: rgb(255, 255, 255);
+  /*HEADER*/
+  h1{
+    color: #FFF;
     font-size: 30px;
 }
 header.masthead{
-    background-color: rgb(12, 13, 17);
+    background-color:#0C0D11;
        
 }
 header.masthead>div{
@@ -36,16 +30,26 @@ header.masthead>.container{
     padding-top: 20px;
 }
 
+
+  /*CONTENT*/
+section{
+    padding: 100px 0;
+    position: relative;
+    display: block;
+}
 .div-esconde, .div-resultado-filtro{
     display: none;
 }
 .div-aparece{
-    display: block!important;
+    display: block;
 }
 
-.card-pesquisa{
-    max-width: 500px;
-       
+.div-input-pesquisa,.div-card-resultado{
+    padding-bottom: 30px;
+}
+.div-card-resultado > #card-resultado > ul > li {
+    list-style: none;
+    padding-left: 10px;
 }
 @media(min-width:580px){
     .card-pesquisa{
@@ -59,12 +63,4 @@ header.masthead>.container{
     #card-resultado{
         margin-left: 35px;
     }
-}
-
-.div-input-pesquisa,.div-card-resultado{
-    padding-bottom: 30px;
-}
-.div-card-resultado > #card-resultado > ul > li {
-    list-style: none;
-    padding-left: 10px;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html 5>
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
@@ -8,43 +8,49 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
 	<meta charset="utf-8">
-	<title> João Nunes- Desafio</title>
+	<title> Desafio Compasso- Buscar Repo GitHub</title>
 </head>
 <body>
 	<header class="masthead text-center">
 		<div class="row text-center">
 			<div>
-				<img src="https://i.imgur.com/V5y0bo1.png" alt="imagem avatar" class="img-fluid avatar-img">
+				<img class="img-fluid avatar-img" src="https://i.imgur.com/V5y0bo1.png" alt="imagem avatar">
 			</div>
 			<div>
-				<h1>Busca Repositórios Git Hub</h1>
+				<h1>Busca Repositórios GitHub</h1>
 			</div>
 		</div>
 	</header>
 	<section class="container text-center">
 		<div class="card-pesquisa">
 			<div class="container mt-4 div-input-pesquisa text-center">
-				<form class="form-inline" name="buscaUser" method="GET">
-				<input class="form-control mr-sm-2" name="pesquisaUser"type="search" placeholder="Digite..." aria-label="Pesquisar">
-				<a href="javascript:buscaUser(document.buscaUser,document.buscaUser.pesquisaUser.value);" class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</a>
+				<form class="form-inline" name="buscaUser" method="GET" onsubmit="return false;">
+					<input class="form-control mr-sm-2" name="pesquisaUser"type="search" placeholder="Digite..." aria-label="Pesquisar">
+						<!--Link Btn passando valor do input-->
+					<a class="btn btn-outline-success my-2 my-sm-0" href="javascript:buscaUser(document.buscaUser,document.buscaUser.pesquisaUser.value);" type="submit">Pesquisar</a>
 				</form>
 			</div>
 			<div class="div-resultado-filtro text-center">
 				<div class="div-card-resultado container text-center">
-					<div class="card" style="width: 18rem;" id="card-resultado">
+					<div class="card" id="card-resultado" style="width: 18rem;" >
 						<div class="card-header" id="title-resultado">
+							<!--Aqui entra o nome do usuário-->
 						</div>
 						<ul class="list-group list-group-flush lista-resultado-busca lista-repo div-esconde" id="lista-repo">
-						
+							<!--Aqui entra a lista de repositórios-->
 						</ul>
 						<ul class="list-group list-group-flush lista-resultado-busca lista-starred div-esconde"  id="lista-starred">
-						
+							<!--Aqui entra a lista de starred-->
+						</ul>
+						<ul class="list-group list-group-flush lista-resultado-busca lista-detalhe div-esconde"  id="lista-detalhe">
+							<!--Aqui entra a lista de detalhes-->
 						</ul>
 					</div>
 				</div>
 				<div class="container div-button-filtro text-center">
-					<a onClick="filter(this)" type="button" class="btn btn-secondary" id="filter-repo">Repos</a>
-					<a onClick="filter(this)" type="button" class="btn btn-secondary" id="filter-starred">Starred</a>
+					<a class="btn btn-secondary" id="filter-repo" onClick="filter(this)" type="button">Repos</a>
+					<a class="btn btn-secondary" id="filter-starred" onClick="filter(this)" type="button">Starred</a>
+					<a class="btn btn-secondary" id="filter-detalhe" onClick="filter(this)" type="button">Detalhes</a>
 				</div>
 			</div>
 		</div>
